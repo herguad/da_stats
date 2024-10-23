@@ -33,3 +33,6 @@ duration_year=netflix_movies[['genre','release_year','duration']]
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
 fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
 fig.set(xlabel="Release year",ylabel="Duration (min)")
+fig.set(title="Movie duration by year of release")
+fig.tick_params(labelsize=7)
+plt.show()
