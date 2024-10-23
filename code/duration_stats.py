@@ -29,3 +29,7 @@ uncategorized=netflix_movies[netflix_movies['genre'] == 'Uncategorized']
 netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 3253, 3736, 3737, 3738, 4187, 5576, 5577, 6735, 7170, 7171])
 
 duration_year=netflix_movies[['genre','release_year','duration']]
+
+palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
+fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
+fig.set(xlabel="Release year",ylabel="Duration (min)")
