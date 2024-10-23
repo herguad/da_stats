@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
+import seaborn as sn
 
 # Read in the Netflix CSV as a DataFrame
 netflix_df = pd.read_csv('netflix_data.csv')
