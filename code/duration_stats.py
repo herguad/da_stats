@@ -40,13 +40,26 @@ no_movies_y=years_movies[years_movies==False]
 
 print(years_movies.value_counts()) #<-- 352
 
-#Drop those rows
-duration_year=duration_year.drop(index=drops)
+#Drop those rows and reset index.
+duration_year=duration_year.drop(index=drops).reset_index()
 
 #Check.
 print(duration_year.shape)
 
-palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
+#Remove rows with other null elements
+print(duration_year.iloc[:,2].index)
+
+for i in range(0,2):
+    for c in duration_year.iloc[:,i].index:
+        if (duration_year.iloc[c,i] == '') is True:
+            duration_year.drop(index=c)
+        else:
+            continue
+        
+print(len(duration_year))
+
+##Plot general distribution in a histogram.
+palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190) #<- number of colors covers range for y=duration.
 fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
 fig.set(xlabel="Release year",ylabel="Duration (min)")
 fig.set(title="Movie duration by year of release")
