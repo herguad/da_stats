@@ -40,6 +40,11 @@ no_movies_y=years_movies[years_movies==False]
 
 print(years_movies.value_counts()) #<-- 352
 
+#Drop those rows
+duration_year=duration_year.drop(index=drops)
+
+#Check.
+print(duration_year.shape)
 
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
 fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
