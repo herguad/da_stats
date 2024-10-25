@@ -32,6 +32,8 @@ netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 32
 
 duration_year=netflix_movies[['genre','release_year','duration']]
 
+
+
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
 fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
 fig.set(xlabel="Release year",ylabel="Duration (min)")
