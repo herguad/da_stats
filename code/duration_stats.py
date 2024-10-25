@@ -32,6 +32,13 @@ netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 32
 
 duration_year=netflix_movies[['genre','release_year','duration']]
 
+#Check for null values.
+#Where there years where no movies were released?
+all_years=range(1960,2020)
+years_movies=duration_year["release_year"].isin(all_years)
+no_movies_y=years_movies[years_movies==False]
+
+print(years_movies.value_counts()) #<-- 352
 
 
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
