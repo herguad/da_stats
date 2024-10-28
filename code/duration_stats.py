@@ -61,6 +61,10 @@ for i in range(0,2):
 print(len(duration_year))
 print(duration_year.head())
 
+# Visualize missingness
+msno.matrix(duration_year)
+plt.show()
+
 ##Plot general distribution in a histogram.
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190) #<- number of colors covers range for y=duration.
 fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
