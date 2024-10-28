@@ -39,6 +39,7 @@ years_movies=duration_year["release_year"].isin(all_years)
 no_movies_y=years_movies[years_movies==False]
 
 print(years_movies.value_counts()) #<-- 352
+print(len(no_movies_y.index))
 
 #Drop those rows and reset index.
 duration_year=duration_year.drop(index=drops).reset_index()
