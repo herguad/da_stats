@@ -42,6 +42,7 @@ print(years_movies.value_counts()) #<-- 352
 print(len(no_movies_y.index))
 
 #Drop those rows and reset index.
+drops=list(no_movies_y.index)
 duration_year=duration_year.drop(index=drops).reset_index()
 
 #Check.
@@ -58,6 +59,7 @@ for i in range(0,2):
             continue
         
 print(len(duration_year))
+print(duration_year.head())
 
 ##Plot general distribution in a histogram.
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190) #<- number of colors covers range for y=duration.
