@@ -66,7 +66,9 @@ print(duration_year.head())
 msno.matrix(duration_year)
 plt.show()
 
-#Check dtypes
+#Check categorical variable consistency.
+genres=duration_year['genre'].value_counts()
+print(genres)
 
 ##Plot general distribution in a histogram.
 palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190) #<- number of colors covers range for y=duration.
