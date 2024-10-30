@@ -70,8 +70,8 @@ plt.show()
 genres=duration_year['genre'].value_counts()
 print(genres)
 
-##Plot general distribution in a histogram.
-palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190) #<- number of colors covers range for y=duration.
+#Plot general distribution in a histogram.
+palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
 fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
 fig.set(xlabel="Release year",ylabel="Duration (min)")
 fig.set(title="Movie duration by year of release")
