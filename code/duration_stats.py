@@ -101,4 +101,20 @@ cult=[748, 820, 1055, 1276, 2284, 2756, 3521, 3670, 3843, 4015, 4098, 4560]
 
 independent=[  10,  436,  526,  631,  690,  713,  722,  828,  981,  983, 1139, 1191,
        1338, 1456, 1756, 2139, 2408, 3666, 3748]
+indeces=classic+cult+independent
 
+#Remove.
+dur_year=duration_year.drop(index=indeces)
+print(dur_year.shape)
+
+international=dur_year[dur_year['genre'] == 'International Movies'].index
+dur_yea=dur_year.drop(index=international)
+print(dur_yea.shape)
+
+#Plot general distribution for clean df in a histogram.
+palette=sn.color_palette("Spectral", as_cmap=True,n_colors=190)
+fig=sn.histplot(dur_yea,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
+fig.set(xlabel="Release year",ylabel="Duration (min)")
+fig.set(title="Movie duration by year of release")
+fig.tick_params(labelsize=7)
+plt.show()
