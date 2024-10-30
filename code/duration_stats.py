@@ -77,3 +77,18 @@ fig.set(xlabel="Release year",ylabel="Duration (min)")
 fig.set(title="Movie duration by year of release")
 fig.tick_params(labelsize=7)
 plt.show()
+
+#Remove movies with ambiguous or vague names.
+no_mov=['International Movies','Classic Movies','Independent Movies', 'Cult Movies']
+
+#Identify indeces
+for j in no_mov:
+    if str(j) in duration_year[['genre']].values:
+        print(j)
+        k=duration_year[duration_year['genre'] == j].index
+        print(k)
+    else:
+        continue
+        
+
+
