@@ -159,3 +159,9 @@ fig4.tick_params(labelsize=7)
 plt.show()
 
 
+#Check correlation between year of release and duration of the movie. Merge decades column. Plot decade/duration
+dur_rel=dur_yea[['release_year','duration']]
+
+sn.kdeplot(data=dur_rel, x="release_year", hue="duration", cut=0)
+plt.show()
+
