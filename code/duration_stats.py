@@ -128,6 +128,10 @@ genres=dur_yea['genre'].value_counts()
 print(genres)
 print(len(dur_yea['genre'].unique()))
 
+#Check period of time covered--> 50 years
+data_year=dur_yea['release_year'].unique()
+print(len(data_year))
+
 #Plot scatter  with genre as hue.
 palette=sn.color_palette("colorblind",n_colors=14)
 fig3=sn.scatterplot(dur_yea,x='release_year',y='duration',palette=palette,hue='genre',legend =False)
@@ -139,13 +143,11 @@ plt.show()
 print(dur_yea['duration'].describe())
 
 
-fig4=sn.regplot(dur_yea,x='release_year',y='duration',x_estimator=np.mean,color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'})
+#Plot data with a linear regression model, specifying estimator and including versions with locally weighted estimates (lowess).
+fig4=sn.regplot(dur_yea,x='release_year',y='duration',color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'},scatter=True,lowess=True)
 fig4.set(xlabel="Release year",ylabel="Duration (min)")
 fig4.set(title="Movie duration by year of release")
 fig4.tick_params(labelsize=7)
 plt.show()
 
-#Check period of time covered--> 50 years
-data_year=dur_yea['release_year'].unique()
-print(len(data_year))
 
