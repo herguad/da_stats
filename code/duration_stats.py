@@ -72,6 +72,14 @@ print(duration_year.head())
 # Visualize missingness
 msno.matrix(duration_year)
 plt.show()
+duryear=duration_year[duration_year['duration'].isna()]
+duryea=duration_year[duration_year['genre'].isna()]
+dury=duration_year[duration_year['release_year'].isna()]
+missing_d=duryear.describe()
+missing_g=duryea.describe()
+missing_r=dury.describe()
+
+print(missing_d,missing_g,missing_r) #<- no nans
 
 #Check categorical variable consistency.
 genres=duration_year['genre'].value_counts()
