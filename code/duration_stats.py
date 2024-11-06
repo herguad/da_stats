@@ -160,8 +160,43 @@ plt.show()
 
 
 #Check correlation between year of release and duration of the movie. Merge decades column. Plot decade/duration
-dur_rel=dur_yea[['release_year','duration']]
 
-sn.kdeplot(data=dur_rel, x="release_year", hue="duration", cut=0)
+from sklearn.preprocessing import LabelEncoder
+Duration=dur_yea['duration']
+Genre=dur_yea['genre']
+
+df=pd.DataFrame({'dur': Duration,'gen': Genre})
+x=range(len(df))
+fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen')
+plt.xlim(1970,2021)
+fig5.set(xlabel="Release year",ylabel="Duration (min)")
+fig5.set(title="Correlation between genre and duration")
+fig5.tick_params(labelsize=7)
 plt.show()
 
+encoder=LabelEncoder()
+encoder.fit(df['gen'])
+df['enc_gen']=encoder.transform(df['gen'])
+corr=df['dur'].corr(df['enc_gen'])
+print("correlation ",corr)
+
+##correlation  -0.26108875322456476 <-- no apparent correlation
+
+Release=dur_yea['release_year']
+
+df=pd.DataFrame({'dur': Duration,'rel': Release})
+x=range(len(df))
+fig6=sn.scatterplot(x=x, y='dur',data=df)
+plt.xlim(0,2025)
+fig6.set(xlabel="Release year",ylabel="Duration (min)")
+fig6.set(title="Correlation between release year and duration")
+fig6.tick_params(labelsize=7)
+plt.show()
+
+encoder=LabelEncoder()
+encoder.fit(df['rel'])
+df['enc_rel']=encoder.transform(df['rel'])
+corr=df['dur'].corr(df['enc_rel'])
+print("correlation ",corr)
+
+##correlation  -0.23574121698533096 <-- no apparent correlation
