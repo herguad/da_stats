@@ -1,2 +1,4 @@
 # DA_stats
-This project provides a more detailed analysis of hypothesis about the possible reasons for the distribution of duration and release date for movies in Netflix database (as of 2022). The initial visualization of data and basic analyses can be found here, in a different project.
+This project provides a more detailed analysis of hte netflix db for movies up until 2022. It includes hypotheses about the possible reasons for the distribution of duration and release date for movies observed in the initial visualization of data and basic analyses can be found here, in a different project.
+In the code folder, two files contain the code for the duration and genre stats, respectively and an img folder contains the different plots generated with the newly wrangled data, based on the cleaned, cropped and selected data following criteria aimed at proper hypothesis testing.
+In both cases, the necesssary packages are imported, data is read into a df immediately filtered to only display movie-related data. Columns of interest are selected and filtering is done with the same criteria as shown in the initial visualization project (REF).
