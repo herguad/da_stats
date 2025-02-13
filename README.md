@@ -19,6 +19,5 @@ Rows for movies of genres 'independent', 'international', 'classic' and 'cult' m
 
 A scatterplot including genre as hue gives a clue to whether genres relate to duration
 
-<img src="imgs\year_duration_hist.png" alt="yd_hist">
 
 Variable correlation
