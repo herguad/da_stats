@@ -9,8 +9,15 @@ In both cases, the necesssary packages are imported, data is read into a df, whi
 
 Next, null and NaN elements are filtered out in two short steps. First, via a simple nested loop, null elements are tracked along each column and rows containing null elements are dropped. Then, using ((missingno package)), the cleaned df is further scanned for other NaNs.
 
+<img src="imgs\na_values.png" alt="na_values" height="768" width="377">
 
 After checking categorical variable consistency (for 'genre') a histogram is plotted to get a picture of the general distribution of 'duration' for different release years.
-<<plot1>> 
+
+![clean_dy](imgs\clean_dy.png)
 
 Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
+
+A scatterplot including genre as hue gives a clue to whether genres relate to duration
+![yd_hist](imgs\year_duration_hist.png)
+
+Variable correlation

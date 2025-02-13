@@ -140,7 +140,7 @@ print(len(dur_yea['genre'].unique()))
 data_year=dur_yea['release_year'].unique()
 print(len(data_year))
 
-#Plot scatter  with genre as hue.
+#Plot scatter with genre as hue.
 palette=sn.color_palette("colorblind",n_colors=14)
 fig3=sn.scatterplot(dur_yea,x='release_year',y='duration',palette=palette,hue='genre',legend =False)
 fig3.set(xlabel="Release year",ylabel="Duration (min)")
