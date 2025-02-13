@@ -13,11 +13,12 @@ Next, null and NaN elements are filtered out in two short steps. First, via a si
 
 After checking categorical variable consistency (for 'genre') a histogram is plotted to get a picture of the general distribution of 'duration' for different release years.
 
-![clean_dy](clean_dy.png)
+<img src="imgs\clean_dy.png" alt="clean_dy">
 
 Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
 
 A scatterplot including genre as hue gives a clue to whether genres relate to duration
-![yd_hist](year_duration_hist.png)
+
+<img src="imgs\year_duration_hist.png" alt="yd_hist">
 
 Variable correlation
