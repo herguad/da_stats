@@ -17,7 +17,8 @@ After checking categorical variable consistency (for 'genre') a histogram is plo
 
 Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
 
-A scatterplot including genre as hue gives a clue to whether genres relate to duration
 
+## Variable correlation
 
-Variable correlation
+Next step to assess possible correlation is first checking general stats with `.describe()`
+
