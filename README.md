@@ -22,3 +22,6 @@ Rows for movies of genres 'independent', 'international', 'classic' and 'cult' m
 
 Next step to assess possible correlation is first checking general stats with `.describe()`
 
+IMGIMGIMG
+
+Plotting df with a linear regression model shows the locally weighed (lowess) stats distribution with a blue line.
