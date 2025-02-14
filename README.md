@@ -30,4 +30,4 @@ Plotting df with a linear regression model shows the locally weighed (lowess) st
 
 Non-weighed regular scatterplot shows the general trend in duration of movies over time.
 
-<img src="imgs\dur_reg_lowess.png" alt="dur_reg_lowess"> 
+<img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
