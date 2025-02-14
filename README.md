@@ -33,3 +33,5 @@ Non-weighed regular scatterplot shows the general trend in duration of movies ov
 <img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
 
 So movies DO seem to be getting shorter in time but we see in the lowess version as locally weighed and non-weighed mean decreases in time mostly in the past decade (2010-2020).
+
+Using the `LabelEncoder()` function from the `sklearn.preprocessing` package we can normalize variables to evaluate correlation between duration and release year of movies together with scipy functions `.fit()` and `transform()`.
