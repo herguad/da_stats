@@ -25,3 +25,6 @@ Next step to assess possible correlation is first checking general stats with `.
 IMGIMGIMG
 
 Plotting df with a linear regression model shows the locally weighed (lowess) stats distribution with a blue line.
+
+<img src="imgs\dur_reg_lowess.png" alt="dur_reg_lowess"> 
+
