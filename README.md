@@ -7,7 +7,7 @@ In the code folder, two files contain the code for the ![duration]() and ![genre
 
 In both cases, the necesssary packages are imported, data is read into a df, which is immediately filtered to only display movie-related data. Columns of interest are selected and filtering for specific duration and genre is done with the same criteria as shown in the initial visualization project (REF), i.e. to discard outliers and uncategorized or inexistent genres. Based on observations from the first project, the data is further filtered to only include rows for movies released between 1970 and 2020.
 
-Next, null and NaN elements are filtered out in two short steps. First, via a simple nested loop, null elements are tracked along each column and rows containing null elements are dropped. Then, using ((missingno package)), the cleaned df is further scanned for other NaNs.
+Next, null and NaN elements are filtered out in two short steps. First, via a simple nested loop, null elements are tracked along each column and rows containing null elements are dropped. Then, using `missingno` package, the cleaned df is further scanned for other NaNs.
 
 <img src="imgs\na_values.png" alt="na_values">
 
@@ -25,7 +25,7 @@ When plotting genre as hue, the prevalence of certain genres over others become 
 
 Next step to assess possible correlation is first checking general stats with `.describe()`
 
-IMGIMGIMG
+<img src="imgs\describe_dur_year.png" alt="gral_stats_dur"> 
 
 Plotting df with a linear regression model shows the locally weighed (lowess) stats distribution with a blue line.
 
