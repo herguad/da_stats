@@ -27,13 +27,13 @@ Next step to assess possible correlation is first checking general stats with `.
 
 <img src="imgs\describe_dur_year.png" alt="gral_stats_dur"> 
 
+A regular scatterplot modelled with a linear regression shows the general trend in duration of movies over time with a blue line indicating a increasingly negative relation between the variables.
+
+<img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
+
 Plotting df with a linear regression model shows the locally weighed (lowess) stats distribution with a blue line.
 
 <img src="imgs\dur_reg_lowess.png" alt="dur_reg_lowess"> 
-
-Non-weighed regular scatterplot shows the general trend in duration of movies over time.
-
-<img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
 
 So movies DO seem to be getting shorter in time but we see in the lowess version as locally weighed and non-weighed mean decreases in time mostly in the past decade (2010-2020).
 
