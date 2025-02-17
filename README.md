@@ -2,10 +2,21 @@
 This project provides a more detailed analysis of hte netflix db for movies up until 2022. It includes hypotheses about the possible reasons for the distribution of duration and release date for movies observed in the initial visualization of data and basic analyses can be found here, in a different project.
 
 
-In the code folder, two files contain the code for the ![duration]() and ![genre]() stats, respectively and an img folder contains the different plots generated with the newly wrangled data, based on the cleaned, cropped and selected data following criteria aimed at proper hypothesis testing.
+In the code folder, two files contain the code for the [duration](code\duration_stats.py) and [genre](code\genre_stats.py) stats, respectively and an img folder contains the different plots generated with the newly wrangled data, based on the cleaned, cropped and selected data following criteria aimed at proper hypothesis testing.
 
 
-In both cases, the necesssary packages are imported, data is read into a df, which is immediately filtered to only display movie-related data. Columns of interest are selected and filtering for specific duration and genre is done with the same criteria as shown in the initial visualization project (REF), i.e. to discard outliers and uncategorized or inexistent genres. Based on observations from the first project, the data is further filtered to only include rows for movies released between 1970 and 2020.
+In both cases, the necesssary packages are imported, data is read into a df, which is immediately filtered to only display movie-related data. 
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+
+netflix_df = pd.read_csv(r'pathway\netflix_data.csv')
+```
+
+Columns of interest are selected and filtering for specific duration and genre is done with the same criteria as shown in the initial visualization project (REF), i.e. to discard outliers and uncategorized or inexistent genres. Based on observations from the first project, the data is further filtered to only include rows for movies released between 1970 and 2020.
 
 Next, null and NaN elements are filtered out in two short steps. First, via a simple nested loop, null elements are tracked along each column and rows containing null elements are dropped. Then, using `missingno` package, the cleaned df is further scanned for other NaNs.
 
@@ -23,10 +34,10 @@ When plotting genre as hue, the prevalence of certain genres over others become 
 
 ## Variable correlation
 
-Next step to assess possible correlation is first checking general stats with `.describe()`
-
+Next step to assess possible correlation is first checking general stats with `.describe()`.
+<p align="center">
 <img src="imgs\describe_dur_year.png" alt="gral_stats_dur"> 
-
+</p>
 A regular scatterplot modelled with a linear regression shows the general trend in duration of movies over time with a blue line indicating a increasingly negative relation between the variables.
 
 <img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
