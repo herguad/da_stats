@@ -4,7 +4,6 @@ import scipy as sp
 import matplotlib.pyplot as plt
 import missingno as msno
 import seaborn as sn
-import statsmodels.api as sm
 
 # Read in the Netflix CSV as a DataFrame
 netflix_df = pd.read_csv('netflix_data.csv')
@@ -168,6 +167,7 @@ Genre=dur_yea['genre']
 
 df=pd.DataFrame({'dur': Duration,'gen': Genre})
 x=range(len(df))
+
 fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen')
 plt.xlim(1970,2021)
 fig5.set(xlabel="Release year",ylabel="Duration (min)")
@@ -187,6 +187,7 @@ Release=dur_yea['release_year']
 
 df=pd.DataFrame({'dur': Duration,'rel': Release})
 x=range(len(df))
+
 fig6=sn.scatterplot(x=x, y='dur',data=df)
 plt.xlim(0,2025)
 fig6.set(xlabel="Release year",ylabel="Duration (min)")

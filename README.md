@@ -47,3 +47,8 @@ Plotting df with a linear regression model shows the locally weighed (lowess) st
 <img src="imgs\dur_reg_lowess.png" alt="dur_reg_lowess"> 
 
 So movies DO seem to be getting shorter in time but mostly in the past decade (2010-2020). To get an actual coefficient confirming this trend, the `LabelEncoder()` function from the `sklearn.preprocessing` package allows for variable normalizing. To evaluate correlation between duration and release year of movies, we first normalize the duration variable and then use `SciPy` functions `.fit()` and `transform()` functions which will fit the model and then transform the data accordingly to properly estimate the correlation using `.corr()`. This yields the following coefficient:
+<p>
+<img src="imgs\corr_dur_year.png" alt="dur_year_corr"> 
+</p>
+
+This means that even though the models plotted above over the whole cleaned data showed a trend of decreasing duration overtime, the actual coefficent implies virtually no correlation between the year of release and the duration of the movie as the coefficient is lower than 0.25. 
