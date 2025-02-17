@@ -31,7 +31,7 @@ A regular scatterplot modelled with a linear regression shows the general trend 
 
 <img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
 
-Plotting df with a linear regression model shows the locally weighed (lowess) stats distribution with a blue line.
+Plotting df with a linear regression model shows the locally weighed (lowess) stats. The minimal variation of the curve up until the 'downward slope' observed between 2010 and 2020 confirms a steady decrease of duration in the previous decades which seems to have accelerated for the last decade.
 
 <img src="imgs\dur_reg_lowess.png" alt="dur_reg_lowess"> 
 
