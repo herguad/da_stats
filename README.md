@@ -1,6 +1,5 @@
-# DA_stats
+# Netflix Stats 
 This project provides a more detailed analysis of hte netflix db for movies up until 2022. It includes hypotheses about the possible reasons for the distribution of duration and release date for movies observed in the initial visualization of data and basic analyses can be found here, in a different project.
-
 
 In the code folder, two files contain the code for the [duration](code\duration_stats.py) and [genre](code\genre_stats.py) stats, respectively and an img folder contains the different plots generated with the newly wrangled data, based on the cleaned, cropped and selected data following criteria aimed at proper hypothesis testing.
 
