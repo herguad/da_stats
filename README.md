@@ -7,9 +7,10 @@ In the code folder, two files contain the code for the [duration](code\duration_
 In both cases, the necesssary packages are imported, data is read into a df, which is immediately filtered to only display movie-related data. 
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
+import missingno as msno
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 netflix_df = pd.read_csv(r'pathway\netflix_data.csv')
