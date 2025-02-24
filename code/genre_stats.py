@@ -120,6 +120,7 @@ for j in no_mov:
 
 gen_sum=genre_sum.drop(index=[8,9,11,14]).sort_values(by='mcount',ascending=True)
 
+#Check resulting number of genres to specify palette n_colors next.
 print(gen_sum['genre'].unique())
 
 
