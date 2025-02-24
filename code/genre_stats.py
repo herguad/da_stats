@@ -89,9 +89,10 @@ plt.show()
 
 palette=sn.color_palette("colorblind",n_colors=18)
 fig=sn.catplot(gen_year,x='genre',y='duration',palette=palette,hue='genre',legend =False,kind='bar')
-fig.set(xlabel="Release year",ylabel="Duration (min)")
-fig.set(title="Movie duration by year of release")
-fig.tick_params(labelsize=7)
+fig.set(xlabel="Genre",ylabel="Duration (min)")
+fig.set(title="Movie duration by genre")
+fig.tick_params(labelsize=8)
+plt.xticks(rotation=30)
 plt.show()
 
 
@@ -119,9 +120,13 @@ for j in no_mov:
 
 gen_sum=genre_sum.drop(index=[8,9,11,14]).sort_values(by='mcount',ascending=True)
 
-palette=sn.color_palette("colorblind",n_colors=18)
-fig=sn.regplot(genre_sum,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
-fig.set(xlabel="Gnere",ylabel="Total movies")
-fig.set(title="Movie duration by year of release")
-fig.tick_params(labelsize=7)
+print(gen_sum['genre'].unique())
+
+
+palette=sn.color_palette("colorblind",n_colors=11)
+fig1=sn.catplot(gen_sum,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
+fig1.set(xlabel="Genre",ylabel="Sum")
+fig1.set(title="Movie count by genre")
+fig1.tick_params(labelsize=8)
+plt.xticks(rotation=30)
 plt.show()
