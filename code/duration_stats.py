@@ -152,7 +152,7 @@ print(dur_yea['duration'].describe())
 
 
 #Plot data with a linear regression model, specifying estimator and including versions with locally weighted estimates (lowess).
-fig4=sn.regplot(dur_yea,x='release_year',y='duration',color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'},scatter=True,lowess=True)
+fig4=sn.regplot(dur_yea,x='release_year',y='duration',color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'}, x_estimator=np.mean,lowess=True)
 fig4.set(xlabel="Release year",ylabel="Duration (min)")
 fig4.set(title="Movie duration by year of release")
 fig4.tick_params(labelsize=7)
@@ -162,28 +162,10 @@ plt.show()
 #Check correlation between year of release and duration of the movie. Merge decades column. Plot decade/duration
 
 from sklearn.preprocessing import LabelEncoder
-Duration=dur_yea['duration']
-Genre=dur_yea['genre']
-
-df=pd.DataFrame({'dur': Duration,'gen': Genre})
-x=range(len(df))
-
-fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen')
-plt.xlim(1970,2021)
-fig5.set(xlabel="Release year",ylabel="Duration (min)")
-fig5.set(title="Correlation between genre and duration")
-fig5.tick_params(labelsize=7)
-plt.show()
-
-encoder=LabelEncoder()
-encoder.fit(df['gen'])
-df['enc_gen']=encoder.transform(df['gen'])
-corr=df['dur'].corr(df['enc_gen'])
-print("correlation ",corr)
-
-##correlation  -0.26108875322456476 <-- no apparent correlation
 
 Release=dur_yea['release_year']
+Duration=dur_yea['duration']
+Genre=dur_yea['genre']
 
 df=pd.DataFrame({'dur': Duration,'rel': Release})
 x=range(len(df))
@@ -202,3 +184,23 @@ corr=df['dur'].corr(df['enc_rel'])
 print("correlation ",corr)
 
 ##correlation  -0.23574121698533096 <-- no apparent correlation
+
+
+
+df=pd.DataFrame({'dur': Duration,'gen': Genre})
+x=range(len(df))
+
+fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen')
+plt.xlim(1970,2021)
+fig5.set(xlabel="Release year",ylabel="Duration (min)")
+fig5.set(title="Correlation between genre and duration")
+fig5.tick_params(labelsize=7)
+plt.show()
+
+encoder=LabelEncoder()
+encoder.fit(df['gen'])
+df['enc_gen']=encoder.transform(df['gen'])
+corr=df['dur'].corr(df['enc_gen'])
+print("correlation ",corr)
+
+##correlation  -0.26108875322456476 <-- no apparent correlation

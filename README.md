@@ -38,13 +38,16 @@ Next step to assess possible correlation is first checking general stats with `.
 <p align="center">
 <img src="imgs\describe_dur_year.png" alt="gral_stats_dur"> 
 </p>
-A regular scatterplot modelled with a linear regression shows the general trend in duration of movies over time with a blue line indicating a increasingly negative relation between the variables.
+
+A regular scatterplot modelled with a linear regression shows the general trend in duration of movies over time with a blue line indicating a increasingly negative relation between the variables. Setting the estimator parameter in seaborn's regplot to np.mean displays the estimate more clearly in vertical (aggregated) lines.
 
 <img src="imgs\dur_reg_scatter.png" alt="dur_reg_scatter"> 
 
-Plotting df with a linear regression model shows the locally weighed (lowess) stats. The minimal variation of the curve up until the 'downward slope' observed between 2010 and 2020 confirms a steady decrease of duration in the previous decades which seems to have accelerated for the last one.
+<img src="imgs\dur_mean.png" alt="dur_reg_mean"> 
 
-<img src="imgs\dur_reg_lowess.png" alt="dur_reg_lowess"> 
+Further specifying the `lowess` parameter in the linear regression model to `True` shows the locally weighed (lowess) stats. The minimal variation of the curve up until the 'downward slope' observed between 2010 and 2020 confirms a steady decrease of duration in the previous decades which seems to have accelerated for the last one.
+
+<img src="imgs\dur_mean_lowess.png" alt="dur_mean_lowess"> 
 
 So movies DO seem to be getting shorter in time but mostly in the past decade (2010-2020). To get an actual coefficient confirming this trend, the `LabelEncoder()` function from the `sklearn.preprocessing` package allows for variable normalizing. To evaluate correlation between duration and release year of movies, we first normalize the duration variable and then use `SciPy` functions `.fit()` and `transform()` functions which will fit the model and then transform the data accordingly to properly estimate the correlation using `.corr()`. This yields the following coefficient:
 <p align="center">
