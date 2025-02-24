@@ -131,3 +131,8 @@ fig1.set(title="Movie count by genre")
 fig1.tick_params(labelsize=8)
 plt.xticks(rotation=30)
 plt.show()
+
+print(gen_sum.describe())
+
+#Further remove movies with fewer than 50 movies.
+
