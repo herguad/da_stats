@@ -182,6 +182,7 @@ print("correlation ",corr)
 df=pd.DataFrame({'dur': Duration,'gen': Genre})
 x=range(len(df))
 palette_corr=sn.color_palette("colorblind",n_colors=14)
+
 fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr)
 plt.xlim(1970,2021)
 sn.move_legend(fig5, "upper left",fontsize=8)
