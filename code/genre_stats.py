@@ -146,5 +146,4 @@ fig2=sn.catplot(genre_tops,x='genre',y='mcount',palette=palette,hue='genre',lege
 fig2.set(xlabel="Genre",ylabel="Sum")
 fig2.set(title="Movie count by genre")
 fig2.tick_params(labelsize=8.5)
-#plt.xticks(rotation=20)
 plt.show()
