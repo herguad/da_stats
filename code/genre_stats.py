@@ -135,7 +135,7 @@ plt.show()
 print(gen_sum.describe())
 
 #Further remove movies with fewer than 50 movies.
-genre_tops=genre_sum[genre_sum['mcount'] > 50]
+genre_tops=genre_sum[genre_sum['mcount'] > 50].sort_values(by='mcount',ascending=True)
 print(genre_tops)
 print(genre_tops['genre'].unique())
 print(genre_tops.describe())
@@ -145,6 +145,6 @@ palette=sn.color_palette("colorblind",n_colors=9)
 fig2=sn.catplot(genre_tops,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
 fig2.set(xlabel="Genre",ylabel="Sum")
 fig2.set(title="Movie count by genre")
-fig2.tick_params(labelsize=8)
-plt.xticks(rotation=30)
+fig2.tick_params(labelsize=8.5)
+#plt.xticks(rotation=20)
 plt.show()
