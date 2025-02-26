@@ -22,7 +22,7 @@ Next, null and NaN elements are filtered out in two short steps. First, via a si
 
 <img src="imgs\na_values.png" alt="na_values">
 
-After checking categorical variable consistency (for 'genre') a histogram is plotted to get a picture of the general distribution of 'duration' for different release years.
+After checking categorical variable consistency, a histogram is plotted to get a picture of the general distribution of 'duration' for different release years.
 
 <img src="imgs\clean_dy.png" alt="clean_dy">
 
