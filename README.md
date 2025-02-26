@@ -68,7 +68,7 @@ The general stats for movie count by genre suggest we filter out movies from gen
 </p>
 
 
-<img src="imgs\dur_yea_gen_scatter.png" alt="genre_count">
+<img src="imgs\genre_mcount.png" alt="genre_count">
 
 ### Variable correlation
 
