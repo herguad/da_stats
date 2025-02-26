@@ -26,14 +26,9 @@ After checking categorical variable consistency, a histogram is plotted to get a
 
 <img src="imgs\clean_dy.png" alt="clean_dy">
 
-Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
-
-When plotting genre as hue, the prevalence of certain genres over others become evident. Reference for genre has been omitted here since analysis for this variable will be taken up below.
-
-<img src="imgs\dur_yea_gen_scatter.png" alt="genreashue">
-
 ## Variable correlation
 
+### Duration
 Next step to assess possible correlation is first checking general stats with `.describe()`.
 <p align="center">
 <img src="imgs\describe_dur_year.png" alt="gral_stats_dur"> 
@@ -50,13 +45,20 @@ Further specifying the `lowess` parameter in the linear regression model to `Tru
 <img src="imgs\dur_mean_lowess.png" alt="dur_mean_lowess"> 
 
 So movies DO seem to be getting shorter in time but mostly in the past decade (2010-2020). To get an actual coefficient confirming this trend, the `LabelEncoder()` function from the `sklearn.preprocessing` package allows for variable normalizing. To evaluate correlation between duration and release year of movies, we first normalize the duration variable and then use `SciPy` functions `.fit()` and `transform()` functions which will fit the model and then transform the data accordingly to properly estimate the correlation using `.corr()`. This yields the following coefficient:
+
 <p align="center">
 <img src="imgs\corr_dur_year.png" alt="dur_year_corr"> 
 </p>
 
 This means that even though the models plotted above based on the whole cleaned data showed a trend of decreasing duration over time, the actual coefficent implies virtually no correlation between the year of release and the duration of the movie as the coefficient is lower than 0.25. 
 
-## Genre
+### Genre
+
+Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
+
+When plotting genre as hue, the prevalence of certain genres over others become evident. Reference for genre has been omitted here since analysis for this variable will be taken up below.
+
+<img src="imgs\dur_yea_gen_scatter.png" alt="genreashue">
 
 A plot for correlation between these two variables shows this result clearly as no trends can be observed in either direction.
 
