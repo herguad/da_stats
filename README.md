@@ -61,12 +61,13 @@ When plotting genre as hue, the prevalence of certain genres over others become 
 
 <img src="imgs\dur_yea_gen_scatter.png" alt="genreashue">
 
-The general stats for movie count by genre suggest we filter out movies from genres with fewer than 50 movies so as to get a more balanced picture, although a simple bar plot shows to what extent some genres (e.g. 'dramas') may be overrepresented.
+The general stats for movie count by genre suggest we filter out movies from genres with fewer than 50 movies so as to get a more balanced picture.
 
 <p align="center">
 <img src="imgs\mcount_describe().png" alt="gral_stats_genre"> 
 </p>
 
+Even after filtering, a simple bar plot shows to what extent some genres (e.g. 'dramas') may be overrepresented.
 
 <img src="imgs\genre_mcount.png" alt="genre_count">
 
