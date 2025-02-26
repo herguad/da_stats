@@ -170,13 +170,6 @@ Genre=dur_yea['genre']
 df=pd.DataFrame({'dur': Duration,'rel': Release})
 x=range(len(df))
 
-fig6=sn.scatterplot(x=x, y='dur',data=df)
-plt.xlim(0,2025)
-fig6.set(xlabel="Release year",ylabel="Duration (min)")
-fig6.set(title="Correlation between release year and duration")
-fig6.tick_params(labelsize=7)
-plt.show()
-
 encoder=LabelEncoder()
 encoder.fit(df['rel'])
 df['enc_rel']=encoder.transform(df['rel'])
@@ -186,12 +179,12 @@ print("correlation ",corr)
 ##correlation  -0.23574121698533096 <-- no apparent correlation
 
 
-
 df=pd.DataFrame({'dur': Duration,'gen': Genre})
 x=range(len(df))
-
-fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen')
+palette_corr=sn.color_palette("colorblind",n_colors=14)
+fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr)
 plt.xlim(1970,2021)
+sn.move_legend(fig5, "upper left",fontsize=8)
 fig5.set(xlabel="Release year",ylabel="Duration (min)")
 fig5.set(title="Correlation between genre and duration")
 fig5.tick_params(labelsize=7)
