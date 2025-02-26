@@ -54,4 +54,12 @@ So movies DO seem to be getting shorter in time but mostly in the past decade (2
 <img src="imgs\corr_dur_year.png" alt="dur_year_corr"> 
 </p>
 
-This means that even though the models plotted above based on the whole cleaned data showed a trend of decreasing duration over time, the actual coefficent implies virtually no correlation between the year of release and the duration of the movie as the coefficient is lower than 0.25. A plot for correlation between these two variables
+This means that even though the models plotted above based on the whole cleaned data showed a trend of decreasing duration over time, the actual coefficent implies virtually no correlation between the year of release and the duration of the movie as the coefficient is lower than 0.25. 
+
+## Genre
+
+A plot for correlation between these two variables shows this result clearly as no trends can be observed in either direction.
+
+<p align="center">
+<img src="imgs\year_genre_corr.png" alt="gen_year_corr"> 
+</p>
