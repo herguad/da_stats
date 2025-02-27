@@ -71,7 +71,7 @@ The general stats for movie count by genre suggest we filter out movies from gen
 <img src="imgs\mcount_describe().png" alt="gral_stats_genre"> 
 </p>
 
-Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces (via a nested conditional in a for-loop). The cleaned df was plotted in a new scatterplot using a gradient palette to better show data density for different years. 
+Rows for movies of genres 'independent', 'international' and 'cult' movies were removed after identifying the specific indeces (via a nested conditional in a for-loop). The cleaned df was plotted in a new scatterplot using a gradient palette to better show data density for different years. 
 
 Even after filtering, a simple bar plot shows to what extent some genres (e.g. 'dramas') may be overrepresented.
 
