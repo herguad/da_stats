@@ -53,9 +53,13 @@ So movies DO seem to be getting shorter in time but mostly in the past decade (2
 
 This means that even though the models plotted above based on the whole cleaned data showed a trend of decreasing duration over time, the actual coefficent implies virtually no correlation between the year of release and the duration of the movie as the coefficient is lower than 0.25. The negative value, consistent with the downward slopes observed in the blue lines above, indicates that even though the correlation is weak ,the trend seems to be such that overal duration of movies might be decreasing but perhaps for reasons other than release dates.
 
-## Genre
+A plot for correlation between these two variables illustrates this result clearly as no trends can be observed in either direction.
 
-Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
+<p align="center">
+<img src="imgs\year_genre_corr.png" alt="gen_year_corr"> 
+</p>
+
+## Genre
 
 When plotting genre as hue, the prevalence of certain genres over others become evident. Reference for genre has been omitted here since analysis for this variable will be taken up below.
 
@@ -67,17 +71,16 @@ The general stats for movie count by genre suggest we filter out movies from gen
 <img src="imgs\mcount_describe().png" alt="gral_stats_genre"> 
 </p>
 
+Rows for movies of genres 'independent', 'international' and 'cult' movies were removed after identifying the specific indeces (via a nested conditional in a for-loop). The cleaned df was plotted in a new scatterplot using a gradient palette to better show data density for different years. 
+
 Even after filtering, a simple bar plot shows to what extent some genres (e.g. 'dramas') may be overrepresented.
 
 <img src="imgs\genre_mcount.png" alt="genre_count">
 
 ### Variable correlation
 
-A plot for correlation between these two variables shows this result clearly as no trends can be observed in either direction.
+To get a more accurate desciption of distribution of movie duration per genre, a boxeplot can be useful.
 
-<p align="center">
-<img src="imgs\year_genre_corr.png" alt="gen_year_corr"> 
-</p>
 
 These observations can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. 
 
@@ -87,4 +90,3 @@ These observations can be confirmed by applying the same procedure for these var
 
 As observed for duration and release year, while there seems to be no correlation between duration and genre, the negative value might be indicative, in this case, of some genres producing shorter outputs than others. 
 
-To get a more accurate desciption of distribution of movie duration per genre, a boxeplot can be useful.
