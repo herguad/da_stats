@@ -148,7 +148,7 @@ fig2.set(title="Movie count by genre")
 fig2.tick_params(labelsize=8.5)
 plt.show()
 
-# Boxenplot to show distribution of duration per movie genre for filtered df.
+# Filter df for duration, first, and total movie count second.
 
 print(gen_year.head())
 
@@ -157,7 +157,7 @@ gen_dur=gen_dur[gen_dur['duration'] >= 60].reset_index(drop=True)
 
 print(len(gen_dur['genre'].unique()))
 
-print(gen_dur)
+print(gen_dur.shape) #<-- check number of rows before further filtering for total movie count.
 
 #Consider genres with a total count over 50 (as per mcount df above).
 keepers=['Classic Movies', 'International Movies', 'Horror Movies', 'Stand-Up','Children', 'Action', 'Documentaries', 'Comedies', 'Dramas']
@@ -176,4 +176,8 @@ print(drop_these)
 # Complete filtering for genres with more than 50 movies total (as per data obtained above in mcount df) 
 # by dropping the indeces from the genre-duration df.
 
+gen_dur=gen_dur.drop(index=drop_these).reset_index(drop=True)
 
+print(gen_dur.shape) #<-- Check number of rows against last value.
+
+#Boxenplot to show distribution of duration per movie genre for filtered df.
