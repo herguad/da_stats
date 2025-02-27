@@ -3,7 +3,7 @@ import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
 import missingno as msno
-import seaborn as sn
+import seaborn as sns
 
 # Read in the Netflix CSV as a DataFrame
 netflix_df = pd.read_csv('netflix_data.csv')
@@ -85,8 +85,8 @@ genres=duration_year['genre'].value_counts()
 #print(genres)
 
 #Plot general distribution in a histogram.
-palette=sn.color_palette("Spectral", as_cmap=True,n_colors=180)
-fig=sn.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
+palette=sns.color_palette("Spectral", as_cmap=True,n_colors=180)
+fig=sns.histplot(duration_year,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
 fig.set(xlabel="Release year",ylabel="Duration (min)")
 fig.set(title="Movie duration by year of release")
 fig.tick_params(labelsize=7)
@@ -123,8 +123,8 @@ dur_yea=dur_year.drop(index=international)
 print(dur_yea.shape)
 
 #Plot general distribution for clean df in a histogram. 
-palette=sn.color_palette("Spectral", as_cmap=True,n_colors=180)
-fig2=sn.histplot(dur_yea,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
+palette=sns.color_palette("Spectral", as_cmap=True,n_colors=180)
+fig2=sns.histplot(dur_yea,x='release_year',y='duration',palette=palette,hue='duration',legend =False,binwidth=1,discrete=(True, False))
 fig2.set(xlabel="Release year",ylabel="Duration (min)")
 fig2.set(title="Movie duration by year of release")
 fig2.tick_params(labelsize=7)
@@ -141,8 +141,8 @@ print(len(data_year))
 
 ###MISSING PLOT###
 #Plot scatter with genre as hue.
-palette=sn.color_palette("colorblind",n_colors=14)
-fig3=sn.scatterplot(dur_yea,x='release_year',y='duration',palette=palette,hue='genre',legend =False)
+palette=sns.color_palette("colorblind",n_colors=14)
+fig3=sns.scatterplot(dur_yea,x='release_year',y='duration',palette=palette,hue='genre',legend =False)
 fig3.set(xlabel="Release year",ylabel="Duration (min)")
 fig3.set(title="Movie duration by year of release")
 fig3.tick_params(labelsize=7)
@@ -152,7 +152,7 @@ print(dur_yea['duration'].describe())
 
 
 #Plot data with a linear regression model, specifying estimator and including versions with locally weighted estimates (lowess).
-fig4=sn.regplot(dur_yea,x='release_year',y='duration',color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'}, x_estimator=np.mean,lowess=True)
+fig4=sns.regplot(dur_yea,x='release_year',y='duration',color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'}, x_estimator=np.mean,lowess=True)
 fig4.set(xlabel="Release year",ylabel="Duration (min)")
 fig4.set(title="Movie duration by year of release")
 fig4.tick_params(labelsize=7)
@@ -181,11 +181,11 @@ print("correlation ",corr)
 
 df=pd.DataFrame({'dur': Duration,'gen': Genre})
 x=range(len(df))
-palette_corr=sn.color_palette("colorblind",n_colors=14)
+palette_corr=sns.color_palette("colorblind",n_colors=14)
 
-fig5=sn.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr)
+fig5=sns.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr)
 plt.xlim(1970,2021)
-sn.move_legend(fig5, "upper left",fontsize=8)
+sns.move_legend(fig5, "upper left",fontsize=8)
 fig5.set(xlabel="Release year",ylabel="Duration (min)")
 fig5.set(title="Correlation between genre and duration")
 fig5.tick_params(labelsize=7)

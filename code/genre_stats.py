@@ -3,7 +3,7 @@ import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
 import missingno as msno
-import seaborn as sn
+import seaborn as sns
 #import statsmodels.api as sm
 
 # Read in the Netflix CSV as a DataFrame
@@ -87,8 +87,8 @@ print(gen_year.shape)
 msno.matrix(gen_year)
 plt.show()
 
-palette=sn.color_palette("colorblind",n_colors=18)
-fig=sn.catplot(gen_year,x='genre',y='duration',palette=palette,hue='genre',legend =False,kind='bar')
+palette=sns.color_palette("colorblind",n_colors=18)
+fig=sns.catplot(gen_year,x='genre',y='duration',palette=palette,hue='genre',legend =False,kind='bar')
 fig.set(xlabel="Genre",ylabel="Duration (min)")
 fig.set(title="Movie duration by genre")
 fig.tick_params(labelsize=8)
@@ -124,8 +124,8 @@ gen_sum=genre_sum.drop(index=[8,9,11,14]).sort_values(by='mcount',ascending=True
 print(gen_sum['genre'].unique())
 
 
-palette=sn.color_palette("colorblind",n_colors=11)
-fig1=sn.catplot(gen_sum,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
+palette=sns.color_palette("colorblind",n_colors=11)
+fig1=sns.catplot(gen_sum,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
 fig1.set(xlabel="Genre",ylabel="Sum")
 fig1.set(title="Movie count by genre")
 fig1.tick_params(labelsize=8)
@@ -141,8 +141,8 @@ print(genre_tops['genre'].unique())
 print(genre_tops.describe())
 
 
-palette=sn.color_palette("colorblind",n_colors=9)
-fig2=sn.catplot(genre_tops,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
+palette=sns.color_palette("colorblind",n_colors=9)
+fig2=sns.catplot(genre_tops,x='genre',y='mcount',palette=palette,hue='genre',legend =False,kind='bar')
 fig2.set(xlabel="Genre",ylabel="Sum")
 fig2.set(title="Movie count by genre")
 fig2.tick_params(labelsize=8.5)
@@ -160,9 +160,7 @@ print(len(gen_dur['genre'].unique()))
 print(gen_dur)
 
 
-#Use previous filter to drop observations for movies with fewer than 50 observations.
 
-keep_these= ['Classic Movies', 'International Movies', 'Horror Movies', 'Stand-Up','Children', 'Action', 'Documentaries', 'Comedies', 'Dramas']
 
 
             
