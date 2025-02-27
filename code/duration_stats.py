@@ -198,3 +198,4 @@ corr=df['dur'].corr(df['enc_gen'])
 print("correlation ",corr)
 
 ##correlation  -0.26108875322456476 <-- no apparent correlation
+
