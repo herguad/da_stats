@@ -53,6 +53,12 @@ So movies DO seem to be getting shorter in time but mostly in the past decade (2
 
 This means that even though the models plotted above based on the whole cleaned data showed a trend of decreasing duration over time, the actual coefficent implies virtually no correlation between the year of release and the duration of the movie as the coefficient is lower than 0.25. The negative value, consistent with the downward slopes observed in the blue lines above, indicates that even though the correlation is weak ,the trend seems to be such that overal duration of movies might be decreasing but perhaps for reasons other than release dates.
 
+A plot for correlation between these two variables illustrates this result clearly as no trends can be observed in either direction.
+
+<p align="center">
+<img src="imgs\year_genre_corr.png" alt="gen_year_corr"> 
+</p>
+
 ## Genre
 
 Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
@@ -73,11 +79,7 @@ Even after filtering, a simple bar plot shows to what extent some genres (e.g. '
 
 ### Variable correlation
 
-A plot for correlation between these two variables shows this result clearly as no trends can be observed in either direction.
 
-<p align="center">
-<img src="imgs\year_genre_corr.png" alt="gen_year_corr"> 
-</p>
 
 These observations can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. 
 
