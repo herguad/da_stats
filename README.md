@@ -81,6 +81,9 @@ Even after filtering, a simple bar plot shows to what extent some genres (e.g. '
 
 To get a more accurate desciption of distribution of movie duration per genre, a boxeplot can be useful.
 
+<img src="imgs\boxen_gen_dur.png" alt="gen_dur_boxen">
+
+(comments on plot)
 
 These observations can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. 
 
