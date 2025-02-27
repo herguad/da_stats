@@ -1,7 +1,7 @@
 # Netflix Stats 
-This project provides a more detailed analysis of hte Netflix db for movies up until 2020. It includes hypotheses about the possible reasons for the distribution of duration and release date for movies observed in the initial visualization of data and basic analyses can be found here, in a different project.
+This project provides a more detailed analysis of hte Netflix db for movies up until 2020. It includes hypotheses about the possible reasons for the distribution of duration for movies observed in the initial visualization of data and basic analyses presented in [a different project](https://github.com/herguad/data_analysis). An analysis in trends and possible correlation for movies genres and duration can be found below.
 
-In the code folder, two files contain the code for the [duration](code\duration_stats.py) and [genre](code\genre_stats.py) stats, respectively and an img folder contains the different plots generated with the newly wrangled data, based on the cleaned, cropped and selected data following criteria aimed at proper hypothesis testing.
+In the code folder, two files contain the code for the [duration](code\duration_stats.py) and [genre](code\genre_stats.py) stats, respectively and an [img folder]() contains the different plots generated with the newly wrangled data, based on the cleaned, cropped and selected data following criteria aimed at proper hypothesis testing.
 
 
 In both cases, the necesssary packages are imported, data is read into a df, which is immediately filtered to only display movie-related data. 
