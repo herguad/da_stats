@@ -153,10 +153,16 @@ plt.show()
 print(gen_year.head())
 
 gen_dur=gen_year[['genre','duration']].reset_index(drop=True)
-gen_dur=gen_dur[gen_dur['duration'] > 60].reset_index(drop=True)
-print(gen_dur.head(100))
+gen_dur=gen_dur[gen_dur['duration'] >= 60].reset_index(drop=True)
+
+print(len(gen_dur['genre'].unique()))
+
+print(gen_dur)
+
 
 #Use previous filter to drop observations for movies with fewer than 50 observations.
 
 keep_these= ['Classic Movies', 'International Movies', 'Horror Movies', 'Stand-Up','Children', 'Action', 'Documentaries', 'Comedies', 'Dramas']
 
+
+            
