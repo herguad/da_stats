@@ -79,9 +79,10 @@ A plot for correlation between these two variables shows this result clearly as 
 <img src="imgs\year_genre_corr.png" alt="gen_year_corr"> 
 </p>
 
-These observations can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. As observed
+These observations can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. 
 
 <p align="center">
 <img src="imgs\corr_gen_dur.png" alt="gen_dur_corr"> 
 </p>
 
+As observed for duration and release year, while there seems to be no correlation between duration and genre, the negative value might be indicative, in this case, of some genres producing shorter outputs than others. 
