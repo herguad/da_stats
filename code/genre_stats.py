@@ -178,6 +178,17 @@ print(drop_these)
 
 gen_dur=gen_dur.drop(index=drop_these).reset_index(drop=True)
 
-print(gen_dur.shape) #<-- Check number of rows against last value.
+print(gen_dur.shape) #<-- Check number of rows (1928) against last value (2046).
 
-#Boxenplot to show distribution of duration per movie genre for filtered df.
+#Check general stats before plotting.
+print(gen_dur.describe())
+
+#Sort values by genre (alphabetically) and use boxenplot to show distribution of duration per movie genre for filtered df.
+gen_dur=gen_dur.sort_values(by='genre')
+
+palette=sns.color_palette("colorblind",n_colors=9)
+fig3=sns.catplot(data=gen_dur,x='genre', y='duration',hue='genre',palette=palette,kind="boxen")
+fig3.set(xlabel="Genre",ylabel="Duration (min)")
+fig3.set(title="Movie duration by genre")
+fig3.tick_params(labelsize=8.5)
+plt.show()
