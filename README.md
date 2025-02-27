@@ -86,3 +86,5 @@ These observations can be confirmed by applying the same procedure for these var
 </p>
 
 As observed for duration and release year, while there seems to be no correlation between duration and genre, the negative value might be indicative, in this case, of some genres producing shorter outputs than others. 
+
+To get a more accurate desciption of distribution of movie duration per genre, a boxeplot can be useful.
