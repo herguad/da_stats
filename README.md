@@ -81,3 +81,7 @@ A plot for correlation between these two variables shows this result clearly as 
 
 As regards possible correlations between movie genre and duration of the movies, applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, correlation results in a very low value as well, in this case, barely over 0.25:
 
+<p align="center">
+<img src="imgs\corr_gen_dur.png" alt="gen_dur_corr"> 
+</p>
+
