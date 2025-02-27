@@ -199,3 +199,10 @@ print("correlation ",corr)
 
 ##correlation  -0.26108875322456476 <-- no apparent correlation
 
+#boxenplot for genre
+palette=sns.color_palette("plasma",n_colors=8)
+fig1=sns.catplot(data=gen_dur,x='genre', y='duration',hue='genre',palette=palette,kind="boxen")
+fig1.set(xlabel="Genre",ylabel="Duration (min)")
+fig1.set(title="Movie duration by genre")
+fig1.tick_params(labelsize=9)
+plt.show()
