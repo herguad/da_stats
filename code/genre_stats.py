@@ -159,8 +159,21 @@ print(len(gen_dur['genre'].unique()))
 
 print(gen_dur)
 
+#Consider genres with a total count over 50 (as per mcount df above).
+keepers=['Classic Movies', 'International Movies', 'Horror Movies', 'Stand-Up','Children', 'Action', 'Documentaries', 'Comedies', 'Dramas']
+
+# Create empty list and a nested conditional insider a for-loop to search for indeces in the df 
+# such that the row contains observations with genres not included in the list of 'keepers'.
+drop_these=[]
+
+for k,v in gen_dur.iterrows():
+    if gen_dur.iloc[k,0] in keepers:
+            continue
+    else:
+        drop_these.append(k)
+print(drop_these)
+
+# Complete filtering for genres with more than 50 movies total (as per data obtained above in mcount df) 
+# by dropping the indeces from the genre-duration df.
 
 
-
-
-            
