@@ -61,7 +61,7 @@ A plot for correlation between these two variables illustrates this result clear
 
 ## Genre
 
-Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces via a nested conditional in a for loop. The cleaned df was plotted in a new instagram using a gradient palette to better show data density for different years. 
+Rows for movies of genres 'independent', 'international', 'classic' and 'cult' movies were removed after identifying the specific indeces (via a nested conditional in a for-loop). The cleaned df was plotted in a new scatterplot using a gradient palette to better show data density for different years. 
 
 When plotting genre as hue, the prevalence of certain genres over others become evident. Reference for genre has been omitted here since analysis for this variable will be taken up below.
 
