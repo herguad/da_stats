@@ -87,6 +87,7 @@ print(gen_year.shape)
 msno.matrix(gen_year)
 plt.show()
 
+sns.set_style("whitegrid")
 palette=sns.color_palette("colorblind",n_colors=18)
 fig=sns.catplot(gen_year,x='genre',y='duration',palette=palette,hue='genre',legend =False,kind='bar')
 fig.set(xlabel="Genre",ylabel="Duration (min)")
