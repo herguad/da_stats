@@ -72,7 +72,6 @@ print(duration_year.head())
 msno.matrix(duration_year)
 plt.show()
 
-sns.set_style("whitegrid")
 duryear=duration_year[duration_year['duration'].isna()]
 duryea=duration_year[duration_year['genre'].isna()]
 dury=duration_year[duration_year['release_year'].isna()]
@@ -141,7 +140,7 @@ print(len(dur_yea['genre'].unique()))
 data_year=dur_yea['release_year'].unique()
 print(len(data_year))
 
-###MISSING PLOT###
+
 #Plot scatter with genre as hue.
 palette=sns.color_palette("colorblind",n_colors=14)
 fig3=sns.scatterplot(dur_yea,x='release_year',y='duration',palette=palette,hue='genre',legend =False)
@@ -154,6 +153,8 @@ print(dur_yea['duration'].describe())
 
 
 #Plot data with a linear regression model, specifying estimator and including versions with locally weighted estimates (lowess).
+
+sns.set_style("whitegrid")
 fig4=sns.regplot(dur_yea,x='release_year',y='duration',color=(255/255, 138/255, 101/255,0.8),line_kws={'color':'royalblue'}, x_estimator=np.mean,lowess=True)
 fig4.set(xlabel="Release year",ylabel="Duration (min)")
 fig4.set(title="Movie duration by year of release")
@@ -186,7 +187,7 @@ x=range(len(df))
 palette_corr=sns.color_palette("colorblind",n_colors=14)
 
 fig5=sns.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr)
-plt.xlim(1970,2021)
+plt.xlim(1970,2022)
 sns.move_legend(fig5, "upper left",fontsize=8)
 fig5.set(xlabel="Release year",ylabel="Duration (min)")
 fig5.set(title="Correlation between genre and duration")
