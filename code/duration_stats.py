@@ -187,7 +187,7 @@ df=pd.DataFrame({'dur': Duration,'gen': Genre})
 x=range(len(df))
 palette_corr=sns.color_palette("colorblind",n_colors=14)
 
-fig5=sns.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr)
+fig5=sns.scatterplot(x=x, y='dur',data=df,hue='gen',palette=palette_corr,sizes=24)
 plt.xlim(1970,2023)
 sns.move_legend(fig5, "upper left",fontsize=8)
 fig5.set(xlabel="Release year",ylabel="Duration (min)")
