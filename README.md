@@ -87,9 +87,8 @@ Some relevant observations can be made regarding the distributions observed in t
 - Shorter movies overall belong to the categories of Stand-up comedy, Children, Documentaries and Horror, with the last two presenting greater variation of duration within the category. However, dcoumentaries' duration  is consistently below two hours and thus shorter than horror movies, which show a longer duration overall and in over half the cases extend over two hours.
 - Longer movies belong to genres Action, Classic, Comedies and Dramas with the last two presenting greater variation as can be observed in a greter amount of boxes extending above and below the main box. However, Comedies show the greates variation in duration overall, with a rgeater number of outliers. These movies can be as short as an hour long and as long as three hours in many cases.
 - Dramas are consistently longer than all other genres as shown by the shorter height of the boxes and the fewer outliers. These movies' duration overall extends between 90 and 200 minutes. 
-- Taking into account the movie count observed above for movies of different genres (where e.g. Dramas accounted for more than half of the movies in the database), it's not clear than a correlation can actually be found between genres and duration.
 
-These observations can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. 
+Taking into account the movie count observed above for movies of different genres (where e.g. Dramas accounted for more than half of the movies in the database), it's not clear than a correlation can actually be found between genres and duration. This can be confirmed by applying the same procedure for these variables with the corresponding labelling, fitting and transforming as before, where correlation results in a very low value as well, in this case, barely over 0.25. 
 
 <p align="center">
 <img src="imgs\corr_gen_dur.png" alt="gen_dur_corr"> 
