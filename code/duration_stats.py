@@ -71,6 +71,8 @@ print(duration_year.head())
 # Visualize missingness
 msno.matrix(duration_year)
 plt.show()
+
+sns.set_style("whitegrid")
 duryear=duration_year[duration_year['duration'].isna()]
 duryea=duration_year[duration_year['genre'].isna()]
 dury=duration_year[duration_year['release_year'].isna()]
