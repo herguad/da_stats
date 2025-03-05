@@ -84,8 +84,8 @@ To get a more accurate desciption of distribution of movie duration per genre, a
 <img src="imgs\boxen_gen_dur.png" alt="gen_dur_boxen">
 
 Some relevant observations can be made regarding the distributions observed in the boxen plot:
-- 
-- 
+- Shorter movies overall belong to the categories of Stand-up comedy, Children, Documentaries and Horror, with the last two presenting greater variation of duration within the category. However, dcoumentaries' duration  is consistently below two hours and thus shorter than horror movies, which show a longer duration overall and in over half the cases extend over two hours.
+- Longer movies belong to genres Action, Classic, C
 - 
 - 
 
